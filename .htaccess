@@ -1,0 +1,17 @@
+# Activation du module de r��criture d'URL :
+RewriteEngine On
+SetEnv session.use_cookies='0';
+php_flag display_errors on
+
+#------------------------------------------------------------------------------------
+# Règles de réécriture d'URL :
+#------------------------------------------------------------------------------------
+
+#--------- pages de la maquete ---------------
+RewriteRule ^alcool$ index.php?op=alcool [L]
+RewriteRule ^soft$ index.php?op=soft [L]
+RewriteRule ^connexion$ index.php?op=connexion [L]
+RewriteRule ^deconnexion$ index.php?op=deconnexion [L]
+
+#--------- retour page accueil ------------------------------------------------------
+ErrorDocument  404  /404.php
